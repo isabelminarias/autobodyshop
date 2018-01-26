@@ -1,0 +1,51 @@
+<app-manager-navbar></app-manager-navbar>
+<img alt="admin-banner-img" src="../../assets/manager-banner.png" width='100%'  style="padding-bottom: 10%"/>
+
+<div class="container-fluid" style="font-size: 'Roboto Slab'">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6">
+					<img alt="admin-users-img" src="../../assets/manager-mechanics.png" width='100%' />
+				</div>
+				<div class="col-md-6">
+					<h3>
+						<span class="display-4">Mechanics</span>
+					</h3>
+					<p>
+						Listing of all mechanics currently active in the workshop, both available and unavailable. <small> Reminder: mechanics with over 5 projects will be deemed unavailable as it endangers the quality of service and productivity</small>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button routerLink='mechanic-list' type="button" class="btn btn-block btn-primary" style='margin: 2% 0 2% 0'>
+						Mechanics
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-6">
+					<img alt="admin-inv-img" src="../../assets/manager-clients.png" width=100% />
+				</div>
+				<div class="col-md-6">
+					<h3>
+						<span class="display-3"> Clients</span>
+					</h3>
+					<p>
+						Tracking of the appointments and services that are currently deemed not finalized or processed. <strong> Priority will be given to clients in need of tolling services. </strong> 
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<button routerLink='waiting-list' type="button" class="btn btn-block btn-info" style='margin: 2% 0 2% 0'>
+						Tracker
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,163 @@
+<app-client-navbar></app-client-navbar>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <h2>
+          Hello, CostumerName!
+        </h2>
+        <p class='lead'>
+          Thank you for using our services. You will receive an e-mail with a QR code once your car is ready to be received at the shop. </p>
+          <hr class="my-4">
+        <p>
+          We would like to remind you that if you plan on using our tolling services, you wait a maximum of 1 (one) hour for a call from our mechanics. This particular service is available Mon-Sat, from 9 a.m. to 5 p.m. If you need tolling services outside of this schedule, please contact 1-800-598-2934 or another tolling service.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <img alt="carselect-img" src="../../../assets/app-carselect.png" style="border-radius: 30px" width="100%" />
+    </div>
+    <div class="col-md-7">
+      <form class="form-inline">
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Select one of your currently registered cars</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Choose...</option>
+          <option value="1">Car Name 1</option>
+          <option value="2">Car Name 2</option>
+          <option value="3">Car Name 3</option>
+        </select>
+
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+      <p class="lead">I'm in need of a tolling service</p>
+      <form class="form">
+        <div class="form-check">
+              <label>
+                <input type="radio" name="radio"> <span class="label-text">Urgent <i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio"> <span class="label-text">Not Urgent</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio" checked> <span class="label-text">Not Applicable <i class="fa fa-times" aria-hidden="true"></i></span>
+              </label>
+            </div>
+      </form>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 2%"></div>
+  <div class="row">
+    <div class="col-md-2">
+      <img alt="dateselect-img" src="../../../assets/app-dateselect.png" style="border-radius: 30px" width="100%" />
+    </div>
+    <div class="col-md-7">
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+  <div class="row" style="margin-top: 2%"></div>
+  <div class="row">
+    <div class="col-md-2">
+      <img alt="servselect-img" src="../../../assets/app-servselect.png" style="border-radius: 30px" width="100%" />
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-4">
+          <form>
+            <h2>Regular Services</h2>
+            <div class="form-check">
+              <label>
+                <input type="checkbox" name="check" checked> <span class="label-text">Oil Check</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="checkbox" name="check"> <span class="label-text">Tire Pressure</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="checkbox" name="check"> <span class="label-text">A/C Check</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="checkbox" name="check" disabled> <span class="label-text">Suspension Check</span>
+              </label>
+            </div>
+          </form>
+
+        </div>
+        <div class="col-md-4">
+          <form>
+            <h2>2. Customs Radios</h2>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio" checked> <span class="label-text">Option 01</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio"> <span class="label-text">Option 02</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio"> <span class="label-text">Option 03</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="radio" name="radio" disabled> <span class="label-text">Option 04</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <form>
+            <h2>3.Radios Toggles</h2>
+            <div class="form-check">
+              <label class="toggle">
+                <input type="radio" name="toggle" checked> <span class="label-text">Option 01</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="toggle">
+                <input type="radio" name="toggle"> <span class="label-text">Option 02</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="toggle">
+                <input type="radio" name="toggle"> <span class="label-text">Option 03</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="toggle">
+                <input type="radio" name="toggle" disabled> <span class="label-text">Option 04</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary my-1" routerLink='/client'>Submit Appointment Request</button>
+    </div>
+    <div class="col-md-5"></div>
+  </div>
+</div>
