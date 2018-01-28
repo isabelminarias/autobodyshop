@@ -1,0 +1,27 @@
+html{
+	background-color:#7CA298;
+}
+#jumbo-consult{
+	background: #000 url("../../../assets/default/jumbo-consult.jpg") bottom center no-repeat;
+	background-size: 100% auto;
+	color: white;
+	opacity: 0.8;
+}
+#jumbo-consult p { 
+	background-color: rgba(0,0,0,0.1);
+ }
+
+#jumbo-story{
+	background: #000 url("../../../assets/default/jumbo-story.jpg") bottom center no-repeat;
+	background-size: 100% auto;
+	opacity: 0.8;
+	color:white;
+	font-weight: bold;
+}
+#jumbo-main{
+	background: #000 url("../../../assets/default/jumbo-main.jpg") bottom center no-repeat;
+	background-size: 100% auto;
+	opacity: 0.8;
+	color:white;
+	font-weight: bold;
+}

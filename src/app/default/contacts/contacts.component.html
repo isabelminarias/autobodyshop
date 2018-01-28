@@ -1,43 +1,51 @@
 <app-navbar></app-navbar>
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Contact Us</legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Name">Name</label>  
-  <div class="col-md-5">
-  <input id="Name" name="Name" type="text" placeholder="Name" class="form-control input-md">
-  <span class="help-block">Let us know your name!</span>  
+<div class="container-fluid" style="margin-top: 2%; margin-bottom: 2%;">
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <h1 class="display-2" style="text-align:center; margin:2%"> Have a suggestion? </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13249.247068040606!2d151.20960562674117!3d-33.8816236491114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1468899355787" width="100%" height="650px" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+      <div class="contact-form">
+        <form>
+          <fieldset>
+            <legend>Contact us!</legend>
+            <div class="form-group">
+              <label for="inputemail">Email address</label>
+              <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="reasonSelect">Reason</label>
+              <select class="form-control" id="reasonSelect">
+                <option>Suggestions</option>
+                <option>Consultation</option>
+                <option>Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="messageTextArea">Your message</label>
+              <textarea class="form-control" id="messageTextArea" rows="3"></textarea>
+            </div>
+            <fieldset class="form-group">
+              <legend>Newsletter?</legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="" checked="">
+                  I want to receive the newsletter!
+                </label>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="email">E-Mail</label>  
-  <div class="col-md-5">
-  <input id="email" name="email" type="text" placeholder="e-mail" class="form-control input-md">
-  <span class="help-block">This is so we can contact you back!</span>  
-  </div>
-</div>
-
-<!-- Textarea -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="suggestions">Comments</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="suggestions" name="suggestions">Let us know what you think!</textarea>
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="contact-button"></label>
-  <div class="col-md-4">
-    <button id="contact-button" name="contact-button" class="btn btn-success"><i class="fa fa-paper-plane"></i> Send Message</button>
-  </div>
-</div>
-
-</fieldset>
-</form>

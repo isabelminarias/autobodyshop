@@ -255,8 +255,25 @@ const routes: Routes = [
 	{
 		path: 'mechanic/spare-parts',
 		component: MechanicSparePartsListComponent
-	}
+	},
 
+/* Log and Register Paths */
+	{
+		path: 'login',
+		component: LoginMainComponent
+	},
+	{
+		path: 'login-employee',
+		component: LoginComponent
+	},
+	{
+		path: 'register',
+		component: LoginRegisterClientComponent
+	},
+	{
+		path: 'register-employee',
+		component: LoginRegisterEmployeeComponent
+	}
 ];
 
 @NgModule({
