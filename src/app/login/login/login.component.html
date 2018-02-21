@@ -3,7 +3,7 @@
 <!--<p> {{loginclick}} is this </p>-->
 <div class="container" id="login" *ngIf="loginclick">
 		<div class="text-center" style="padding:50px 0">
-				<div class="logo">Log In</div>
+				<h1>Log In!</h1>
 				<!-- Main Form -->
 				<div class="login-form-1">
 					<form id="login-form" class="text-left">
@@ -39,7 +39,7 @@
 <!--<p> {{registerclick}} is register but doesnt show up either</p> -->
 <div class="container" id="registration" *ngIf ="registerclick" >
 	<div class="text-center" style="padding:50px 0">
-	<div class="logo">register</div>
+	<h1>Register</h1>
 	<!-- Main Form -->
 	<div class="login-form-1">
 		<form id="register-form" class="text-left">
@@ -47,7 +47,7 @@
 			<div class="main-login-form">
 				<div class="login-group">
 					<div class="form-group">
-						<label for="reg_username" class="sr-only">Email address</label>
+						<label for="reg_username" class="sr-only">Username</label>
 						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="janedoe">
 					</div>
 					<div class="form-group">
@@ -77,6 +77,7 @@
 			</div>
 			<div class="etc-login-form">
 				<p>Already have an account? <button (click)="showlogin()" type="button" class="btn btn-link btn-sm">Log in here!</button></p>
+				<p>Trying to access the employee registration form? <button (click)="showregisteremp()" type="button" class="btn btn-link btn-sm">Try here</button></p>
 			</div>
 		</form>
 	</div>
@@ -84,12 +85,75 @@
 	</div>
 </div>
 	
+<!-- REGISTRATION FORM -->
+<!--<p> {{registerclick}} is register but doesnt show up either</p> -->
+<div class="container" id="registration_employee" *ngIf ="registerempclick" >
+		<div class="text-center" style="padding:50px 0">
+		<h1>Employee - Register</h1>
+		<!-- Main Form -->
+		<div class="login-form-1">
+			<form id="register-form" class="text-left">
+				<div class="login-form-main-message"></div>
+				<div class="main-login-form">
+					<div class="login-group">
+						<div class="form-group">
+							<label for="reg_username" class="sr-only">Email address</label>
+							<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="janedoe">
+						</div>
+						<div class="form-group">
+							<label for="reg_password" class="sr-only">Password</label>
+							<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+						</div>
+						<div class="form-group">
+							<label for="reg_password_confirm" class="sr-only">Password Confirm</label>
+							<input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+						</div>
+						
+						<div class="form-group">
+							<label for="reg_email" class="sr-only">Email</label>
+							<input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email@example.com">
+						</div>
+						<div class="form-group">
+							<label for="reg_fullname" class="sr-only">Full Name</label>
+							<input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="Jane Doe">
+						</div>
+						
+						<div class="form-check form-check-inline">
+							<label for="" class="form-check-label">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 
+								Mechanic 
+							</label>
+							<label for="" class="form-check-label">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 
+								Manager
+							</label>
+							<label for="" class="form-check-label disabled">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 
+								Admin
+							</label>
+						</div>
+
+						<div class="form-group login-group-checkbox">
+							<input type="checkbox" class="" id="reg_agree" name="reg_agree">
+							<label for="reg_agree">I agree with <a href="#"> Terms & Conditions</a></label>
+						</div>
+					</div>
+					<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+				</div>
+				<div class="etc-login-form">
+					<p>Already have an account? <button (click)="showlogin()" type="button" class="btn btn-link btn-sm">Log in here!</button></p>
+				</div>
+			</form>
+		</div>
+		<!-- end:Main Form -->
+		</div>
+	</div>
 
 <!-- FORGOT PASSWORD FORM -->
 <!--{{passwordclick}} is password but doesnt show up so f u -->
 <div class="container" id="forgotten-password" *ngIf ="passwordclick" >
 		<div class="text-center" style="padding:50px 0">
-				<div class="logo">forgot password</div>
+				<h1>Forgotten Password</h1>
 				<!-- Main Form -->
 				<div class="login-form-1">
 					<form id="forgot-password-form" class="text-left">
