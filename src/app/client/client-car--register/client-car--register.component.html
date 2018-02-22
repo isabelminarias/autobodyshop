@@ -13,154 +13,123 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-2">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="thumbnail" width="100%" />
-			<div class="input-group mb-3">
-			  <div class="custom-file">
-			    <input type="file" class="custom-file-input" id="inputGroupFile02">
-			    <label class="custom-file-label" for="inputGroupFile02"><i class="fa fa-file-image-o" aria-hidden="true"></i></label>
-			  </div>
-			  <div class="input-group-append">
-			    <span class="input-group-text" id=""><i class="fa fa-upload" aria-hidden="true"></i></span>
-			  </div>
-			</div>
-		</div>
-		<div class="col-md-10">
-			<div class="row">
-				<div class="col-md-6">
-					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							 
-							<label for="carnickname" class="col-sm-2 control-label">
-								Nickname
-							</label>
-							<div class="col-sm-10">
-								<input type="email" class="form-control" id="carnickname" placeholder="Car Nickname (Optional)"/>
-							</div>
-						</div>
-						<div class="form-group">
-							 
-							<label for="platenumber" class="col-sm-2 control-label">
-								Plate Number
-							</label>
-							<div class="col-sm-10">
-								<input type="text" class="form-control" id="platenumber" placeholder="Plate Number" />
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-md-6">
-					<form class="form-horizontal" role="form">
-						<form class="form">
-						  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Year</label>
-						  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" (change)="getModel(year)" >
-						    <option selected>Choose...</option>
-						    <option *ngFor="let year of years" [value]=year> {{year}} </option>
-						  </select>
 
-						  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Make</label>
-						  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-						    <option selected>Choose...</option>
-						    <option *ngFor="let m of make " [value]="make"> {{ m }} </option>
-						  </select>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-2" style = "background-color: rgba(11, 77, 131, 0.836);">
+		</div>
+		<div class="col-md-8">
+				<div class="container">
+						<form class="form-horizontal" method="POST" action="postCar()">
+							<fieldset>
+							
+							<!-- Form Name -->
+							<legend>Register your Car <i class="fa fa-car"></i></legend>
+							
+							<!-- Appended Input-->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="plate">Plate Number</label>
+							  <div class="col-md-5">
+								<div class="input-group">
+								  <input id="plate" name="plate" class="form-control" placeholder="ABC123" type="text" required="">
+								</div>
+								<p class="help-block">Do not input spaces, or the following characters: ., _, -.</p>
+							  </div>
+							</div>
 
-						  <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Model</label>
-						  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-						    <option selected>Choose...</option>
-						    <option value="1">Mercedes</option>
-						    <option value="2">Toyota</option>
-						    <option value="3">Suzuki</option>
-						    <option value="4">Subaru</option>
-						    <option value="5">Mitsubishi</option>
-						    <option value="6">MBW</option>
-							<option value="6">Audi</option>
-							<option value="6">Bentley</option>
-							<option value="6">Chery</option>
-						  </select>
-						</form>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<img alt="mycar-img" src="../../assets/2.jpg" width="100%" style="border-radius: 12px ;margin-top:2%; margin-bottom: 2%;" />
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<form>
-            <h2>Condition</h2>
-            <div class="form-check">
-              <label>
-                <input type="radio" name="radio" checked> <span class="label-text">New</span>
-              </label>
-            </div>
-            <div class="form-check">
-              <label>
-                <input type="radio" name="radio"> <span class="label-text">Second Hand</span>
-              </label>
-            </div>
-          </form>
-		</div>
-		<div class="col-md-4">
-			<form>
-	            <h2>Insurance</h2>
-	            <div class="form-check">
-	              <label>
-	                <input type="radio" name="radio" > <span class="label-text">Yes</span>
-	              </label>
-	            </div>
-	            <div class="form-check">
-	              <label>
-	                <input type="radio" name="radio" checked> <span class="label-text">No</span>
-	              </label>
-	            </div>
-	          </form>
-		</div>
-		<div class="col-md-4">
-			<div class="form-group">
-					 
-					<label for="inputEmail3" class="col-sm-2 control-label" disabled>
-						Company
-					</label>
-					<div class="col-sm-10">
-						<input type="email" class="form-control" id="inputEmail3" disabled/>
+							<!-- Button Drop Down -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="make">Manufacturer / Make</label>
+							  <div class="col-md-5">
+								<div class="input-group">
+								  <input id="make" name="make" class="form-control" placeholder="Chevrolet" type="text" required="">
+								</div>
+							  </div>
+							</div>
+							
+							<!-- Button Drop Down -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="model">Model</label>
+							  <div class="col-md-5">
+								<div class="input-group">
+								  <input id="model" name="model" class="form-control" placeholder="Touring" type="text" required="">
+								  <div class="input-group-btn">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									  Select
+									  <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu pull-right">
+									  <li><a href="#">Option one</a></li>
+									  <li><a href="#">Option two</a></li>
+									  <li><a href="#">Option three</a></li>
+									</ul>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<!-- Button Drop Down -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="year">Year</label>
+							  <div class="col-md-4">
+								<div class="input-group">
+								  <input id="year" name="year" class="form-control" placeholder="2020" type="text" required="">
+								  <div class="input-group-btn">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+									  Select
+									  <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu pull-right">
+									  <li><a href="#">1</a></li>
+									  <li><a href="#">2</a></li>
+									  <li><a href="#">3</a></li>
+									</ul>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<!-- Multiple Radios (inline) -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="new">New</label>
+							  <div class="col-md-4"> 
+								<label class="radio-inline" for="new-0">
+								  <input type="radio" name="new" id="new-0" value="1" checked="checked">
+								  Yes
+								</label> 
+								<label class="radio-inline" for="new-1">
+								  <input type="radio" name="new" id="new-1" value="0">
+								  No
+								</label>
+							  </div>
+							</div>
+							
+							<!-- File Button --> 
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="car_img">Upload image</label>
+							  <div class="col-md-4">
+								<input id="car_img" name="car_img" class="input-file" type="file">
+							  </div>
+							</div>
+							
+							<!-- Button -->
+							<div class="form-group">
+							  <label class="col-md-4 control-label" for="register_car"></label>
+							  <div class="col-md-4">
+								<button id="img" name="img" class="btn btn-primary" (click)="postCar()" >Send</button>
+							  </div>
+							</div>
+							
+							</fieldset>
+							</form>
+							
 					</div>
-				</div>
-				<div class="form-group">
-					 
-					<label for="inputPassword3" class="col-sm-2 control-label">
-						ID
-					</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="inputPassword3" disabled/>
-					</div>
-				</div>
+		</div>
+		<div class="col-md-2" style = "background-color: rgba(11, 77, 131, 0.836); ">
 		</div>
 	</div>
 </div>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-		</div>
-		<div class="col-md-1">
-			 
-			<button type="button" class="btn btn-block btn-xs btn-info" routerLink="/client/carlist">
-				Register
-			</button>
-		</div>
-		<div class="col-md-2">
-		</div>
-		<div class="col-md-1">
-			 
-			<button type="button" class="btn btn-block btn-xs btn-danger" routerLink="/client">
-				Cancel
-			</button>
-		</div>
-		<div class="col-md-4">
-		</div>
-	</div>
-</div>
+	
+
+

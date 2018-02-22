@@ -5,13 +5,16 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CarqueryService {
-  private _url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=&sold_in_us=0';
+  private _url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=';
   private makes_url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=';
+  private models_url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getModels&make=ford&year=2005&sold_in_us=1&body=SUV';
   private soldUSNo: '&sold_in_us=0';
   constructor(private http: HttpClient) { }
 
-  getMakes(year): Observable<Car[]> {
-    const _url = this.makes_url.concat(year).concat(this.soldUSNo);
-    return this.http.get<Car[]>(this._url);
+  getMakes(year: number) {
+    return this.http.get(this.makes_url.concat(year.toString()));
+  }
+  makes() {
+    return this.http.get(this.makes_url.concat('1999'));
   }
 }

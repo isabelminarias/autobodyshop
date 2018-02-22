@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CarqueryService } from '../../services/carquery/carquery.service';
+import {Observable} from '../../../../node_modules/rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-client-car--register',
@@ -15,13 +17,30 @@ export class ClientCarRegisterComponent implements OnInit {
     1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
     2000,  2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
     2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
-  ]
+  ];
+  private makes = [
+    'Audi', 'Acura', 'Abarth', 'Alfa-Romeo', 'Aston Martin', 'Austin',
+    'Bedford', 'Bentley', 'Bolwell', 'Bufori', 'Buggatti' , 'BMW', 'Buick',
+    'Cadillac', 'Caterham', 'Chery', 'Chevrolet', 'Chrysler', 'Citroen',
+    'Daewoo', 'Daihatsu', 'Dodge', 'Ferrari',
+    'Fiat', 'Ford', 'Geely Wall', 'Hyundai', 'Holden', 'Kia',
+    'Hino', 'Hummer',
+    'Infiniti', 'Isuzu',
+    'Jaguar', 'Land Rover', 'Lexus', 'Lotus',
+    'Mazda', 'Mini Cooper', 'Mitsubishi', 'Mercedes-Benz', 'Nissan',
+    'Opel', 'Porsche', 'Proton', 'Peugeot',
+    'Range Rover', 'Renault',
+    'Saab', 'Skoda', 'Ssangyong', 'Subaru', 'Suzuki',
+    'Tata', 'Toyota', 'Tesla', 'Volvo', 'Volkswagen'
+  ];
+  private apiURL = 'localhost3000/api/car/add';
+  data: any = {};
   constructor( private CarQ: CarqueryService) { }
 
   ngOnInit() {
   }
 
-  getModel(){
-    
+  postCar(){
+    console.log('posting car');
   }
 }
