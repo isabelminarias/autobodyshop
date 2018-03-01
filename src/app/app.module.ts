@@ -60,8 +60,8 @@ import { HttpClientModule } from '@angular/common/http';
   import { MechanicProfileComponent } from './mechanic/mechanic-profile/mechanic-profile.component';
   import { MechanicProfileModifyComponent } from './mechanic/mechanic-profile--modify/mechanic-profile--modify.component';
   import { MechanicNavbarComponent } from './mechanic/mechanic-navbar/mechanic-navbar.component';
-  import { CarqueryService } from './services/carquery/carquery.service';
 
+  import { ApiService } from './services/api/api.service';
 
 @NgModule({
   declarations: [
@@ -127,7 +127,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CarqueryService],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

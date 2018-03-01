@@ -1,4 +1,7 @@
 <app-admin-navbar></app-admin-navbar>
+<h1> Users here...  {{ users }} </h1>
+<h2>... and linda here {{ userGirl }}</h2>
+<h2>Here goes {{ dataUser.id }} {{ dataUser.name }} </h2>
 <div class="container-fluid">
 	<div class="row" style='border-bottom: 5px solid #C8E8ED'></div>
 	<div class="row" id='managers-row'>
@@ -24,16 +27,16 @@
 				<thead>
 					<tr>
 						<th>
-							@username
+							Name
 						</th>
 						<th>
-							Full Name
+							Username
 						</th>
 						<th>
-							Branch
+							email
 						</th>
 						<th>
-							Status
+							id
 						</th>
 						<th>
 							Options
@@ -41,18 +44,18 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr >
 						<td>
-							adminjoe
+							{{ dataUser.name }}
 						</td>
 						<td>
-							Joseph Stalin
+							{{ dataUser.username }}
 						</td>
 						<td>
-							Atlanta Branch
+							{{ dataUser.email }}
 						</td>
 						<td>
-							Active
+							{{ dataUser.id }}
 						</td>
 						<td>
 							<button type="button" class="btn btn-sm btn-danger">
@@ -68,19 +71,19 @@
 					</tr>
 					<tr class="active">
 						<td>
-							mgtLinda
+							uname {{ users.name }}
 						</td>
 						<td>
-							Linda Lander
+							username {{ users.username }}
 						</td>
 						<td>
 							Atlanta Branch
 						</td>
 						<td>
-							Active
+							
 						</td>
 						<td>
-							<button type="button" class="btn btn-sm btn-danger">
+							<button type="button" class="btn btn-sm btn-danger" (click)="getUserData()">
 								<i class="fa fa-ban" aria-hidden="true"></i>
 							</button>
 							<button type="button" class="btn btn-sm btn-success disabled">
