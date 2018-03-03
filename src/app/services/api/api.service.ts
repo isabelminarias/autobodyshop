@@ -2,16 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { IApi } from './Iapi';
 import { Observable } from 'rxjs/Observable';
+import * as _ from 'lodash';
+import { Users } from './users';
 
 @Injectable()
 export class ApiService {
   constructor(private http: HttpClient) { }
-  usersUrl = 'https://jsonplaceholder.typicode.com/users/1';
-  getUsers() {
-    return this.http.get<IApi>(this.usersUrl);
+  usersUrl = 'https://jsonplaceholder.typicode.com/users';
+  localUrl = 'localhost:3000/api/user/list';
+
+  getUsers(){
+    return this.http.get<IApi[]>(this.usersUrl)
   }
-  getUsersResponse(): Observable<HttpResponse<IApi>>{
-    return this.http.get<IApi>(
-      this.usersUrl, { observe: 'response' })
+  getApiUsers(){
+    return this.http.get<IApi[]>(this.localUrl)
+    
   }
 }
