@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\client",
+    "\\src\\app\\client\\client-car--register",
+    "\\src\\app\\services",
+    "\\src\\app\\services\\carquery"
+  ],
+  "SelectedNode": "\\src\\app\\services\\carquery\\carquery.service.spec.ts",
+  "PreviewInSolutionExplorer": false
+}

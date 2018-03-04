@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './client-car--register.component.html',
   styleUrls: ['./client-car--register.component.css']
 })
-export class ClientCarRegisterComponent implements OnInit {
+export class ClientCarRegisterComponent implements OnInit {	
   private years = [1948, 1949,
     1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959,
     1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969,
@@ -32,10 +32,32 @@ export class ClientCarRegisterComponent implements OnInit {
     'Saab', 'Skoda', 'Ssangyong', 'Subaru', 'Suzuki',
     'Tata', 'Toyota', 'Tesla', 'Volvo', 'Volkswagen'
   ];
+<<<<<<< HEAD
+  private apiURL = 'localhost3000/api/car/add';
+  data: any = {};
+
+  constructor( private http: HttpClient) { 
+
+  }
+
+  getYears(){
+    return this.years;
+  }
+=======
   
   constructor() { }
+>>>>>>> dfe3f5afa01a6c856e44e2cae650c3e236f55df4
 
   ngOnInit() {
+  	/*this.getCars();*/
+  }
+
+  getCars(){
+  		this.http.get('https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getYears')
+  		.subscribe((res: Response)=>{ 
+  		const numerito = JSON.parse(res);
+  		console.log(numerito);
+  		})
   }
 
   postCar(){
