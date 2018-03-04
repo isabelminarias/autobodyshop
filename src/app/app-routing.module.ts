@@ -59,19 +59,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-/* Homepage Paths */ 
-	{
-		path: '',
-		component: HomepageComponent
-	},
-	{
-		path:'service',
-		component: ServiceComponent
-	},
-	{
-		path: 'contact',
-		component: ContactsComponent
-	},
+/* Homepage Paths */
+  {	path: '',			component: HomepageComponent },
+  {	path: 'service', 	component: ServiceComponent},
+  {	path: 'contact', 	component: ContactsComponent},
 	{
 		path: 'history',
 		component: HistoryComponent
@@ -199,12 +190,12 @@ const routes: Routes = [
 		component: AdminUsersCreateComponent
 	},
 	{
-		path: 'admin/users/modify',
-		component: AdminUsersModifyComponent
+		path: 'admin/listing',
+		component: AdminInventoryViewComponent,
 	},
 	{
-		path: 'admin/inv',
-		component: AdminInventoryViewComponent
+		path: 'admin/users/modify',
+		component: AdminUsersModifyComponent
 	},
 	{
 		path: 'admin/modify',

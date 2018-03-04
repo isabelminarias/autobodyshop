@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CarqueryService } from '../../services/carquery/carquery.service';
 import {Observable} from '../../../../node_modules/rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 
@@ -33,6 +32,7 @@ export class ClientCarRegisterComponent implements OnInit {
     'Saab', 'Skoda', 'Ssangyong', 'Subaru', 'Suzuki',
     'Tata', 'Toyota', 'Tesla', 'Volvo', 'Volkswagen'
   ];
+<<<<<<< HEAD
   private apiURL = 'localhost3000/api/car/add';
   data: any = {};
 
@@ -43,6 +43,10 @@ export class ClientCarRegisterComponent implements OnInit {
   getYears(){
     return this.years;
   }
+=======
+  
+  constructor() { }
+>>>>>>> dfe3f5afa01a6c856e44e2cae650c3e236f55df4
 
   ngOnInit() {
   	/*this.getCars();*/
