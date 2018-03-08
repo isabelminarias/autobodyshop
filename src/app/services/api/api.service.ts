@@ -9,13 +9,27 @@ import { Users } from './users';
 export class ApiService {
   constructor(private http: HttpClient) { }
   usersUrl = 'https://jsonplaceholder.typicode.com/users';
-  localUrl = 'localhost:3000/api/user/list';
+  localUrl = 'http://localhost:3000/api/user/list';
 
   getUsers(){
     return this.http.get<IApi[]>(this.usersUrl)
   }
   getApiUsers(){
     return this.http.get<IApi[]>(this.localUrl)
-    
+  }
+  getAllClients(){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/1')
+  }
+  getAllMechanics(){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/2')
+  }
+  getAllManagers(){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/3')
+  }
+  getAllAdmins(){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/4')
+  }
+  getAllUnasigned(){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/0')
   }
 }

@@ -4,6 +4,8 @@ export interface Users {
     name: string, 
     password: string, 
     email: string,
-    type: number
+    type: number,
+    updatedAt: Date,
+    createdAt: Date
 // tslint:disable-next-line:eofline
 }

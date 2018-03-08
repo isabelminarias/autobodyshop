@@ -32,29 +32,17 @@ export class ClientCarRegisterComponent implements OnInit {
     'Saab', 'Skoda', 'Ssangyong', 'Subaru', 'Suzuki',
     'Tata', 'Toyota', 'Tesla', 'Volvo', 'Volkswagen'
   ];
-<<<<<<< HEAD
+
+  constructor(private http: HttpClient) { }
   private apiURL = 'localhost3000/api/car/add';
   data: any = {};
-
-  constructor( private http: HttpClient) { 
-
-  }
-
-  getYears(){
-    return this.years;
-  }
-=======
-  
-  constructor() { }
->>>>>>> dfe3f5afa01a6c856e44e2cae650c3e236f55df4
-
   ngOnInit() {
-  	/*this.getCars();*/
+  	this.getCars();
   }
 
   getCars(){
   		this.http.get('https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getYears')
-  		.subscribe((res: Response)=>{ 
+  		.subscribe((res: string)=>{ 
   		const numerito = JSON.parse(res);
   		console.log(numerito);
   		})

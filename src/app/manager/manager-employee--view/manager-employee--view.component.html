@@ -1,1 +1,20 @@
 <app-manager-navbar></app-manager-navbar>
+
+
+<body>
+    <h1>Employee: {{Empp}} </h1>
+    <div *ngFor="let Emp of employees | async" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header"> Employee: {{Emp.userID}} </div>
+        <div class="card-body">
+          <h4 class="card-title"> Information: {{Emp.username}}  {{Emp.email}} </h4>
+          <p class="card-text">ID: {{Emp.id}} </p>
+        </div>
+      </div>
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header"> Employee: {{Nerd.name}} </div>
+        <div class="card-body">
+          <h4 class="card-title"> Information: {{Nerd.username}}  {{Nerd.email}} </h4>
+          <p class="card-text">ID: {{ Nerd.id }} </p>
+        </div>
+      </div>
+</body>
