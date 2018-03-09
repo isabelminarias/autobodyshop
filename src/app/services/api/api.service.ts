@@ -7,29 +7,16 @@ import { Users } from './users';
 
 @Injectable()
 export class ApiService {
+  currentUser;
   constructor(private http: HttpClient) { }
-  usersUrl = 'https://jsonplaceholder.typicode.com/users';
-  localUrl = 'http://localhost:3000/api/user/list';
 
-  getUsers(){
-    return this.http.get<IApi[]>(this.usersUrl)
+  getAllUsers(usertype: number){
+    return this.http.get<Users[]>('http://localhost:3000/api/user/all/'.concat(usertype.toString()));
   }
-  getApiUsers(){
-    return this.http.get<IApi[]>(this.localUrl)
+  getUserCount(usertype: number){
+    return this.http.get('http://localhost:3000/api/user/all/c/'.concat(usertype.toString()));
   }
-  getAllClients(){
-    return this.http.get<Users[]>('http://localhost:3000/api/user/all/1')
-  }
-  getAllMechanics(){
-    return this.http.get<Users[]>('http://localhost:3000/api/user/all/2')
-  }
-  getAllManagers(){
-    return this.http.get<Users[]>('http://localhost:3000/api/user/all/3')
-  }
-  getAllAdmins(){
-    return this.http.get<Users[]>('http://localhost:3000/api/user/all/4')
-  }
-  getAllUnasigned(){
-    return this.http.get<Users[]>('http://localhost:3000/api/user/all/0')
+  setCurrentUser(user: number){
+    this.currentUser = user;
   }
 }

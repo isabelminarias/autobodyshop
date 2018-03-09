@@ -3,6 +3,10 @@
 	<div class="row">
 		<button type="button" routerLink="create" class="btn btn-block btn-success">Create a New User</button>
 	</div>
+	<div class="row">
+		<h2>Api String {{apiString}}</h2> <br><br>
+		<h2>CLients?</h2>
+	</div>
 </div>
 <div class="container-fluid">
 	<div class="row" style='border-bottom: 5px solid #C8E8ED'></div>
@@ -19,7 +23,7 @@
 					User type: Clients
 				</div>
 				<div class="panel-footer">
-					...
+					Total: {{ncl}}
 				</div>
 			</div>
 		</div>
@@ -54,7 +58,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="active" *ngFor="let c  of clients ">
+					<tr class="active" *ngFor="let c of clients">
 						<td>
 							{{ c.name }}
 						</td>
@@ -83,7 +87,7 @@
 							<button type="button" class="btn btn-sm btn-success disabled">
 								<i class="fa fa-check" aria-hidden="true"></i>
 							</button>
-							<button type="button" class="btn btn-sm btn-info">
+							<button type="button" value=`c.userID` (click)="userView(c.userID)" class="btn btn-sm btn-info">
 								<i class="fa fa-id-badge" aria-hidden="true"></i>
 							</button> 
 						</td>
@@ -105,10 +109,10 @@
 					</h3>
 				</div>
 				<div class="panel-body">
-					Total Users Currently: 2
+					User type: mechanics (2)
 				</div>
 				<div class="panel-footer">
-					Users pending confirmation: 1
+					Total users: {{nm}}
 				</div>
 			</div>
 		</div>
@@ -197,7 +201,7 @@
 					User type: managers
 				</div>
 				<div class="panel-footer">
-					Users pending confirmation: 1
+					Total users: {{nmg}}
 				</div>
 			</div>
 		</div>
@@ -286,7 +290,7 @@
 					User class: administrator
 				</div>
 				<div class="panel-footer">
-					Users pending confirmation: 3
+					Total users: {{na}}
 				</div>
 			</div>
 		</div>
@@ -359,6 +363,7 @@
 			</table> 
 		</div>
 	</div>
+	<div class="row" style='border-bottom: 5px solid #C8E8ED'></div>
 	<div class="row" id='unasigned-row'>
 		<div class="col-md-2">
 			<img alt="Bootstrap Image Preview" src="../../../assets/admin/icon-client.png" style='border-radius: 0px 0px 30px 30px'  width="100%" />
@@ -372,7 +377,7 @@
 					User class: to be determined
 				</div>
 				<div class="panel-footer">
-					Users pending confirmation: 3
+					Total users: {{nu}}
 				</div>
 			</div>
 		</div>

@@ -15,35 +15,45 @@ import { DatePipe } from '@angular/common';
 })
 export class AdminUsersListComponent implements OnInit {
   users; apiString;
-  clients; mechanics; managers; admins; unasigned
+  clients; mechanics; managers; admins; unasigned;
+  ncl; nm; nmg; na; nu;
 
   constructor(private http: HttpClient, private api: ApiService) { }
 
   ngOnInit() {
-    this.getApiData()
+    this.getUsersData()
+
   }
 
-  getApiData(){
-    this.api.getApiUsers()
-      .subscribe((response) => { this.users = response},
-    (error) => {this.apiString = error},
-    () => {this.apiString = 'complete'}
-    )
-    this.api.getAllClients()
-      .subscribe((response) => { this.clients = response},
-    (error) => {this.apiString = error})
-    this.api.getAllMechanics()
-      .subscribe((response)=> { this.mechanics = response},
-      (error) => {this.apiString = error})
-    this.api.getAllManagers()
-      .subscribe((response)=> { this.managers = response},
-      (error) => {this.apiString = error})
-    this.api.getAllAdmins()
-      .subscribe((response)=> { this.admins = response},
-      (error) => {this.apiString = error})
-    this.api.getAllUnasigned()
-      .subscribe((response)=> { this.unasigned = response},
-      (error) => {this.apiString = error})
+  getUsersData(){
+    //Client data
+    this.api.getAllUsers(1)
+    .subscribe((response) => { this.clients = response},
+    (error) => {let apiString = error});
+    this.api.getUserCount(1).subscribe((res) => { this.ncl = res})
+    //Mechanics data
+    this.api.getAllUsers(2)
+    .subscribe((response) => { this.mechanics = response},
+    (error) => {let apiString = error});
+    this.api.getUserCount(2).subscribe((res) => { this.nm = res})
+    //Managers data
+    this.api.getAllUsers(3)
+    .subscribe((response) => { this.managers = response},
+    (error) => {let apiString = error});
+    this.api.getUserCount(3).subscribe((res) => { this.nmg = res})
+    //Admin data
+    this.api.getAllUsers(4)
+    .subscribe((response) => { this.admins = response},
+    (error) => {let apiString = error});
+    this.api.getUserCount(4).subscribe((res) => { this.na = res})
+    //Unasigned users data
+    this.api.getAllUsers(0)
+    .subscribe((response) => { this.unasigned = response},
+    (error) => {let apiString = error});
+    this.api.getUserCount(0).subscribe((res) => { this.nu = res})
   }
 
+  userView(id: number){
+    this.api.setCurrentUser(id);
+  }
 }
