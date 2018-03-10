@@ -19,4 +19,7 @@ export class ApiService {
   setCurrentUser(user: number){
     this.currentUser = user;
   }
+  getCurrentUser(){
+    return this.currentUser
+  }
 }

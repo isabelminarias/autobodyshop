@@ -1,1 +1,101 @@
 <app-admin-navbar></app-admin-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1" style="background-color:darkslategrey"></div>
+        <div class="col-md-10">
+            <div class="container">
+                <form class="form-horizontal">
+                    <fieldset>
+                    
+                    <!-- Form Name -->
+                    <div class="container-fluid" style='margin-bottom: 10%; margin-bottom: 2%'>
+                        <img src="../../../assets/admin/admin-banner.png" width='100%'>
+                    </div>
+                    <h1>Create New User | Administrator </h1>
+                    
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="name">Name</label>  
+                      <div class="col-md-5">
+                        <input id="name" name="name" type="text" placeholder="Jane Doe" class="form-control input-md" required="">
+                      </div>
+                    </div>
+                    
+                    <!-- Text input-->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="email">E-Mail</label> 
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="ionicons ion-email"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="janedoe@example.com" aria-label="email" name='email' aria-describedby="basic-addon1">
+                     </div>  
+                    </div>
+                    <!-- Prepended text-->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="username">Username</label>
+                      <div class="col-md-5">
+                        <div class="input-group">
+                          <span class="input-group-addon">@</span>
+                          <input id="username" name="username" class="form-control" placeholder="janedoe" type="text" required="">
+                        </div>
+                        
+                      </div>
+                    </div>
+                    
+                    <!-- Password input-->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="password">Password</label>
+                      <div class="col-md-5">
+                        <input id="password" name="password" type="password" placeholder="put your password here" class="form-control input-md" required="">
+                        <span class="help-block">must be between 8 and 18 characters</span>
+                      </div>
+                    </div>
+                    
+                    <!-- Multiple Radios -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="type">User Type</label>
+                      <div class="col-md-4">
+                      <div class="radio">
+                        <label for="type-0">
+                          <input type="radio" name="type" id="type-0" value="1" checked="checked">
+                          Client
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="type-1">
+                          <input type="radio" name="type" id="type-1" value="2">
+                          Mechanic
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="type-2">
+                          <input type="radio" name="type" id="type-2" value="3">
+                          Manager
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="type-3">
+                          <input type="radio" name="type" id="type-3" value="4">
+                          Admin
+                        </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="send"></label>
+                      <div class="col-md-4">
+                        <button id="send" name="send" class="btn btn-success">Send</button>
+                      </div>
+                    </div>
+                    
+                    </fieldset>
+                    </form>
+                    
+            </div>
+        </div>
+        <div class="col-md-1" style="background-color:darkslategrey"></div>
+    </div>
+</div>

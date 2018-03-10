@@ -3,10 +3,6 @@
 	<div class="row">
 		<button type="button" routerLink="create" class="btn btn-block btn-success">Create a New User</button>
 	</div>
-	<div class="row">
-		<h2>Api String {{apiString}}</h2> <br><br>
-		<h2>CLients?</h2>
-	</div>
 </div>
 <div class="container-fluid">
 	<div class="row" style='border-bottom: 5px solid #C8E8ED'></div>
@@ -87,7 +83,7 @@
 							<button type="button" class="btn btn-sm btn-success disabled">
 								<i class="fa fa-check" aria-hidden="true"></i>
 							</button>
-							<button type="button" value=`c.userID` (click)="userView(c.userID)" class="btn btn-sm btn-info">
+							<button type="button" (click)="userView(c.userID)" routerLink="view"  class="btn btn-sm btn-info">
 								<i class="fa fa-id-badge" aria-hidden="true"></i>
 							</button> 
 						</td>
