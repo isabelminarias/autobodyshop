@@ -1,34 +1,63 @@
 <app-navbar></app-navbar>
-<div class="container">
-<h4>{{userData.username}} - {{userData.password}} </h4> 
-<h5>--- {{user.email}}</h5>
-	<div class="row" style="margin-top:20px">
-		<div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-			<form >
-				<fieldset>
-					<h2>Please Sign In</h2>
-					<hr class="colorgraph">
-					<div class="form-group">
-						<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+<div class="container" style="margin-left: 15%; margin-bottom: 5%;">
+
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<form role="form">
+			<fieldset>
+				<h2>Please Sign In</h2>
+				<hr class="colorgraph">
+				<div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Username">
+				</div>
+				<div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+				</div>
+				<span class="button-checkbox">
+					<button data-toggle="modal" data-target="#t_and_c_m" type="button" class="btn btn-block" data-color="info">Forgotten Password</button>
+				</span>
+				<hr class="colorgraph">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
 					</div>
-					<div class="form-group">
-						<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+					<div class="col-xs-6 col-sm-6 col-md-6">
+						<a routerLink="/register" class="btn btn-lg btn-primary btn-block">Register</a>
 					</div>
-					<span class="button-checkbox">
-						<a routerLink="/" class="btn btn-link pull-right">Forgot Password?</a>
-					</span>
-					<hr class="colorgraph">
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<input type="submit" class="btn btn-lg btn-success btn-block" (click)="SignIn()" value="Sign In">
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<a routerLink="/register" class="btn btn-lg btn-primary btn-block">Register</a>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-		</div>
+				</div>
+			</fieldset>
+		</form>
 	</div>
-	
-	</div>
+</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myModalLabel">Forgotten Password</h4>
+        </div>
+        <div class="modal-body">
+			<form role="form">
+                <fieldset>
+                    <h2>We'll send you an email with your password information.</h2>
+                    <hr class="colorgraph">
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Please input your email here">
+                    </div>
+                    <hr class="colorgraph">
+                    <div class="row">
+						<input type="submit" class="btn btn-lg btn-success btn-block" value="Submit" data-dismiss="modal">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

@@ -75,10 +75,6 @@ const routes: Routes = [
 		path: 'consultation',
 		component: ConsultationComponent
 	},
-	{
-		path: 'login',
-		component: LoginComponent
-	},
 
 /* Client Paths */
 	{
@@ -251,11 +247,11 @@ const routes: Routes = [
 /* Log and Register Paths */
 	{
 		path: 'login',
-		component: LoginMainComponent
+		component: LoginComponent
 	},
 	{
-		path: 'login-employee',
-		component: LoginComponent
+		path: 'login/forgot',
+		component: LoginMainComponent
 	},
 	{
 		path: 'register',

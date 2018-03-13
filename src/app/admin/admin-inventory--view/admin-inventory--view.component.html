@@ -1,148 +1,115 @@
 <app-admin-navbar></app-admin-navbar>
 
 <div class="container-fluid">
+    <div class="row">
+        <h1>Generic Auto Parts</h1>
+    </div>
 	<div class="row">
-		<div class="col-md-12" style="margin:2%"></div>
-	</div>
-	<div class="row">
-		<div class="col-md-2">
-            <img src="../../../assets/manager-general.png" style="margin-top:4%" width="100%">
-		</div>
-		<div class="col-md-10">
-			<div class="panel-heading">
-                <h3 class="panel-title">Generic Pieces</h3>
-                <div class="pull-right">
-                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
-                </div>
-            </div>
-			<table class="table table-striped table-dark" style="background-color:#283891">
-                <thead class="" style="background-color:#2AAABD">
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Type" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Section" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Quantity" disabled></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>Air intake manifold</td>
-                        <td>A5</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Seat fastener</td>
-                        <td>B12</td>
-                        <td>105</td>
-                    </tr>
-                </tbody>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <table id="tableReport" class="table table-hover table-striped ">
+            	<tbody>
+            		<tr class="media" id="carga_30" data-id="30">
+            			<td class="media-left">
+            				<h2>30</h2>
+            			</td>
+            			<td class="media-body">
+            				<h4 class="media-heading font-yellow text-bold hidden-xs">Auto Piece Name</h4>
+            				<h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">Auto Piece</h4>
+            				<span><strong>Status:</strong> <span class="badge badge-pill badge-secondary">Auto Part</span></span>
+            				<span><strong>Tipo:</strong> Conjugada</span>
+            				<span class="hidden-xs"><strong>Origem:</strong> Frios Completa</span>
+            				<span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+            				<span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+            				<span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+            			</td>		</tr>
+            		<tr class="media" id="carga_20" data-id="20">
+            			<td class="media-left">
+            				<h2>20</h2>
+            			</td>
+            			<td class="media-body">
+            				<h4 class="media-heading font-yellow text-bold hidden-xs">CELIO JOAQUIM DA COSTA</h4>
+            				<h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">CELIO COSTA</h4>
+            				<span><strong>Status:</strong> <span class="label label-info">Carregando</span></span>
+            				<span><strong>Tipo:</strong> Conjugada</span>
+            				<span class="hidden-xs"><strong>Origem:</strong> Complemento Horti</span>
+            				<span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+            				<span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+            				<span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+            			</td>		</tr>
+            		<tr class="media" id="carga_10" data-id="10">
+            			<td class="media-left">
+            				<h2>10</h2>
+            			</td>
+            			<td class="media-body">
+            				<h4 class="media-heading font-yellow text-bold hidden-xs">ELJHONNY FERREIRA BRAZ</h4>
+            				<h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">ELJHONNY BRAZ</h4>
+            				<span><strong>Status:</strong> <span class="label label-info">Carregando</span></span>
+            				<span><strong>Tipo:</strong> Normal</span>
+            				<span class="hidden-xs"><strong>Origem:</strong> Seca Completa</span>
+            				<span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+            				<span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+            				<span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+            			</td>		</tr>
+            	</tbody>
             </table>
-            <div class="row">
-            	<div class="col-md-4"></div>
-            	<div class="col-md-4">
-            		<nav aria-label="...">
-					  <ul class="pagination pagination-lg">
-					    <li class="page-item disabled">
-					      <a class="page-link" href="#" tabindex="-1">1</a>
-					    </li>
-					    <li class="page-item"><a class="page-link" href="#">2</a></li>
-					    <li class="page-item"><a class="page-link" href="#">3</a></li>
-					  </ul>
-					</nav>
-            	</div>
-            	<div class="col-md-4"></div>
-            </div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12" style="margin:2%;">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-10">
-			<div class="panel-heading">
-                <h3 class="panel-title">Model-Specific Pieces</h3>
-                <div class="pull-right">
-                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
-                </div>
-            </div>
-			<table class="table table-striped table-dark" style="background-color:#283891">
-                <thead class="" style="background-color:#2AAABD">
-                    <tr class="filters">
-                        <th><input type="text" class="form-control" placeholder="ID" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Model" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Type" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Section" disabled></th>
-                        <th><input type="text" class="form-control" placeholder="Quantity" disabled></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Ford Galaxy</td>
-                        <td>Camshaft</td>
-                        <td>A4</td>
-                        <td>20</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Toyota Corolla</td>
-                        <td>Crank case</td>
-                        <td>A2</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Honda Civic</td>
-                        <td>Connecting rod</td>
-                        <td>A2</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Honda Civic</td>
-                        <td>Connecting rod</td>
-                        <td>A2</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Honda Civic</td>
-                        <td>Connecting rod</td>
-                        <td>A2</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Honda Civic</td>
-                        <td>Connecting rod</td>
-                        <td>A2</td>
-                        <td>5</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="row">
-            	<div class="col-md-4"></div>
-            	<div class="col-md-4">
-            		<nav aria-label="...">
-					  <ul class="pagination pagination-lg">
-					    <li class="page-item disabled">
-					      <a class="page-link" href="#" tabindex="-1">1</a>
-					    </li>
-					    <li class="page-item"><a class="page-link" href="#">2</a></li>
-					    <li class="page-item"><a class="page-link" href="#">3</a></li>
-					  </ul>
-					</nav>
-            	</div>
-            	<div class="col-md-4"></div>
-            </div>
-		</div>
-		<div class="col-md-2">
-            <img src="../../../assets/manager-specific.png" style="margin-top:8%" width="100%">
-		</div>
-
 	</div>
 </div>
+
+<div class="container-fluid">
+        <div class="row">
+            <h1>Generic Auto Parts</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <table id="tableReport" class="table table-hover table-striped ">
+                    <tbody>
+                        <tr class="media" id="carga_30" data-id="30">
+                            <td class="media-left">
+                                <h2>30</h2>
+                            </td>
+                            <td class="media-body">
+                                <h4 class="media-heading font-yellow text-bold hidden-xs">ELIAS DO CARMO DA SILVA</h4>
+                                <h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">ELIAS SILVA</h4>
+                                <span><strong>Status:</strong> <span class="label label-info">Carregando</span></span>
+                                <span><strong>Tipo:</strong> Conjugada</span>
+                                <span class="hidden-xs"><strong>Origem:</strong> Frios Completa</span>
+                                <span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+                                <span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+                                <span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+                            </td>		</tr>
+                        <tr class="media" id="carga_20" data-id="20">
+                            <td class="media-left">
+                                <h2>20</h2>
+                            </td>
+                            <td class="media-body">
+                                <h4 class="media-heading font-yellow text-bold hidden-xs">CELIO JOAQUIM DA COSTA</h4>
+                                <h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">CELIO COSTA</h4>
+                                <span><strong>Status:</strong> <span class="label label-info">Carregando</span></span>
+                                <span><strong>Tipo:</strong> Conjugada</span>
+                                <span class="hidden-xs"><strong>Origem:</strong> Complemento Horti</span>
+                                <span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+                                <span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+                                <span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+                            </td>		</tr>
+                        <tr class="media" id="carga_10" data-id="10">
+                            <td class="media-left">
+                                <h2>10</h2>
+                            </td>
+                            <td class="media-body">
+                                <h4 class="media-heading font-yellow text-bold hidden-xs">ELJHONNY FERREIRA BRAZ</h4>
+                                <h4 class="media-heading font-yellow text-bold hidden-sm hidden-md hidden-lg hidden-xl">ELJHONNY BRAZ</h4>
+                                <span><strong>Status:</strong> <span class="label label-info">Carregando</span></span>
+                                <span><strong>Tipo:</strong> Normal</span>
+                                <span class="hidden-xs"><strong>Origem:</strong> Seca Completa</span>
+                                <span class="hidden-xs"><strong>Valor:</strong> R$ 9.450,00</span>
+                                <span class="hidden-xs"><strong>Peso:</strong> 2.400 KG</span>
+                                <span class="hidden-xs"><strong>Cubage:</strong> 3 m³</span>
+                            </td>		</tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
 
