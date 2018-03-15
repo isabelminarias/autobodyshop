@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-appointment.component.css']
 })
 export class ClientAppointmentComponent implements OnInit {
-
+  services = ['Oil check; ', 'Tire pressure; ', 'AC Check; ', 
+  'Suspension Check; ', 'Wheel Alignment; ', 'Common maintenance (General); ', 
+  'Engine tuning; ', 'Other; ']
   constructor() { }
-
+  
   ngOnInit() {
   }
 

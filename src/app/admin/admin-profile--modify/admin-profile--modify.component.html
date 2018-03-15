@@ -1,6 +1,8 @@
 <app-admin-navbar></app-admin-navbar>
 <div class="row">
-    <div class="col-md-3"></div>
+    <div class="col-md-3">
+        {{dataUser}}
+    </div>
     <div class="col-md-6">
             <div class="container">
                     <ul class="nav nav-tabs">
@@ -13,7 +15,7 @@
                         </ul>
                     <div id="myTabContent" class="tab-content">
                       <div class="tab-pane active in" id="home">
-                            <form class="form-horizontal" id="tab1">
+                            <form class="form-horizontal" id="tab1" ng-form="ProfileChange" >
                                 <fieldset>
                                 
                                 <!-- Form Name -->
@@ -23,7 +25,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="name">Name</label>  
                                     <div class="col-md-8">
-                                    <input id="name" name="name" type="text" placeholder="Jane Doe" class="form-control input-md">
+                                    <input data-ng-model="name" id="name" name="name" type="text" placeholder="Jane Doe" class="form-control input-md">
                                     
                                     </div>
                                 </div>
@@ -32,7 +34,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="username">Username</label>  
                                     <div class="col-md-8">
-                                    <input id="username" name="username" type="text" placeholder="JaneDoe123" class="form-control input-md">
+                                    <input data-ng-model="username" id="username" name="username" type="text" placeholder="JaneDoe123" class="form-control input-md">
                                     
                                     </div>
                                 </div>
@@ -41,7 +43,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="email">Email</label>  
                                     <div class="col-md-8">
-                                    <input id="email" name="email" type="text" placeholder="janedoe@example.com" class="form-control input-md">
+                                    <input data-ng-model="email" id="email" name="email" type="text" placeholder="janedoe@example.com" class="form-control input-md">
                                     
                                     </div>
                                 </div>
@@ -50,7 +52,7 @@
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="pusa">Profile Picture</label>
                                     <div class="col-md-4">
-                                    <input id="pusa" name="pusa" class="input-file" type="file">
+                                    <input data-ng-model="pp" id="pusa" name="pusa" class="input-file" type="file">
                                     </div>
                                 </div>
                                 
@@ -72,7 +74,7 @@
                                     <fieldset>
                                     
                                     <!-- Form Name -->
-                                    <legend>Form Name</legend>
+                                    <legend>Password Change</legend>
                                     
                                     <!-- Password input-->
                                     <div class="form-group">

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-register--client.component.css']
 })
 export class LoginRegisterClientComponent implements OnInit {
-
+  user: Object = {};
   constructor() { }
 
   ngOnInit() {
+    this.user = {fname: '', lname:'', username:'', email:'', password:'', passwordConfirm:''}
+  }
+
+  onRegister(){
+    
   }
 
 }

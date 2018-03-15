@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule  } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Components
   import { AppComponent } from './app.component';
@@ -127,6 +128,7 @@ import { HttpClientModule  } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
