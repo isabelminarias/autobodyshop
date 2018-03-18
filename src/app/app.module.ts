@@ -63,6 +63,7 @@ import { FormsModule } from '@angular/forms';
   import { MechanicNavbarComponent } from './mechanic/mechanic-navbar/mechanic-navbar.component';
 
   import { ApiService } from './services/api/api.service';
+  import { CarService } from './services/car/car.service';
 
 
 @NgModule({
@@ -130,7 +131,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ApiService],
+  providers: [ApiService, CarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
